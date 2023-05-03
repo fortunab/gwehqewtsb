@@ -23,6 +23,7 @@ def medie_modif():
     # se afiseaza media tuturor coloanelor numerice
     # valorile NaN se inlocuiesc cu media valorilor
     # de pe coloana respectiva, pentru fiecare coloana
+    cf = cf.drop(cf["Country"])
     ult = cf.fillna(cf.mean())
     return ult
 
